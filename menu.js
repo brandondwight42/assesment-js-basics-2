@@ -31,8 +31,17 @@
 */
 
 //CODE HERE
+const pizza = {
+    name:  'peperoni',
+    price: 4.99,
+    category: 'entree',
+    popularity: 8,
+    rating: 7,
+    tags: ['value', 'classic', 'large', 'peperoni']
 
 
+}
+console.log(pizza)
 
 //////////////////PROBLEM 2////////////////////
 /* 
@@ -41,7 +50,7 @@
     First, log the popularity of pizza. 
     Use dot notation to access the value.
 */
-
+console.log(pizza.popularity)
 //CODE HERE
 
 
@@ -53,6 +62,7 @@
 */
 
 //CODE HERE
+console.log(pizza.tags[1])
 
 
 /*
@@ -63,7 +73,9 @@
 */
 
 //CODE HERE
+let{price} = pizza
 
+console.log(price)
 
 /*
     Fourth, and last, destructure the category
@@ -73,7 +85,8 @@
 */
 
 //CODE HERE
-
+let{category} = pizza
+console.log(category)
 
 //////////////////PROBLEM 3////////////////////
 /* 
@@ -88,7 +101,54 @@
 */
 
 //CODE HERE
+const starters = {
+    name:  'breadsticks',
+    price: 2.99,
+    category: 'appetizer',
+    popularity: 6,
+    rating: 5,
+    tags: ['value', 'classic', 'high carb']
+}
 
+const meatLoversPizza = {
+    name:  'meat lovers pizza',
+    price: 14.99,
+    category: 'entree',
+    popularity: 8,
+    rating: 9,
+    tags: ['meat', 'peperoni', 'bacon', 'sausage', 'ham'] 
+}
+
+const hawaianPizza = {
+    name:  'hawaian pizza',
+    price: 12.99,
+    category: 'entree',
+    popularity: 9,
+    rating: 8,
+    tags: ['ham', 'pineapple'] 
+}
+
+const buffaloPizza = {
+    name:  'buffalo pizza',
+    price: 13.99,
+    category: 'entree',
+    popularity: 6,
+    rating: 7,
+    tags: ['spicy', 'sweet', 'bleu cheese']
+} 
+
+const veggiePizza = {
+    name:  'veggie pizza',
+    price: 9.99,
+    category: 'entree',
+    popularity: 5,
+    rating: 7,
+    tags: ['vegetarian', 'healthy', 'low fat']
+} 
+
+let foodArr = [starters, meatLoversPizza, hawaianPizza, buffaloPizza, veggiePizza]
+
+//console.log(foodArr)
 
 
 //////////////////PROBLEM 4////////////////////
@@ -105,7 +165,9 @@
 
 //CODE HERE
 
-// const filteredFood = foodArr.filter(/* CALLBACK HERE */)
+const filteredFood = foodArr.filter(food => food.tags === 'ham')
+
+console.log(filteredFood)
 
 
 
