@@ -34,10 +34,9 @@ const cart = [
 ]
 
 //CODE HERE
-    //const priceTotal = (arr, cb) => cb(arr) 
- //const summedPrice = cart.reduce(arr.price)
+const summedPrice = cart.reduce((acc, el)=>{}, 0)
 
- //console.log(summedPrice)
+console.log(summedPrice)
 
 
 //////////////////PROBLEM 2////////////////////
@@ -56,9 +55,12 @@ const cart = [
 */
 
 //CODE HERE
+const calcFinalPrice = (cartTotal, coupon, tax) => {
+    let finalTotal = (total * (1 + tax)) - coupon
+    return finalTotal
+}
 
-
-
+console.log(calcFinalPrice(10, 2, .06))
 //////////////////PROBLEM 3////////////////////
 /*  
     In this problem, you'll create a model for 
@@ -81,7 +83,10 @@ const cart = [
 
 /*
     TEXT ANSWER HERE
-
+    firstName (String)
+    lastName (String)
+    phone number (string)
+    creditCard (number)
 */
 
 /*
