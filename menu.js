@@ -165,7 +165,7 @@ let foodArr = [starters, meatLoversPizza, hawaianPizza, buffaloPizza, veggiePizz
 
 //CODE HERE
 
-const filteredFood = foodArr.filter(food => food.tags.incluses('ham'))
+const filteredFood = foodArr.filter(meal => meal.tags.includes('ham'))
 
 console.log(filteredFood)
 
@@ -215,19 +215,19 @@ const filterByProperty = (property, number, type) => {
     const filteredArray = foodArr.filter(meal => {
         if(type === 'above'){
             return meal[property] > number
-            }
-            else if(type === 'below'){
-                return meal[property] < number
-            }
+        } else if(type === 'below'){
+            return meal[property] < number
+        }
     })
     return filteredArray
-} 
-console.log(filterByProperty("price", 7, 'below'))
-/*
-    Invoke the `filterByProperty` function passing
-    in a value for each paramter.
+}
 
-    You'll have to console.log to see the filtered array
+/*
+Invoke the `filterByProperty` function passing
+in a value for each paramter.
+
+You'll have to console.log to see the filtered array
 */
 
 //CODE HERE
+console.log(filterByProperty('price', 7, 'below'))
