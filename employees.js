@@ -25,10 +25,10 @@ class Employee {
         this.name = name
         this.shifts = shifts
     }
-}
 
-getSchedule(){
-    console.log(`${this.name} works on ${this.shift}`)
+    getSchedule(){
+        console.log(`${this.name} works on ${this.shifts}`)
+    }
 }
 
 
@@ -44,7 +44,7 @@ getSchedule(){
 */
 
 //CODE HERE
-const empOne = new Empolyee
+const empOne = new Employee('Jess', 'weekday mornings, weekday afternoons')
 /*
     Call the `getSchedule` method on the
     `empOne` object.
@@ -66,7 +66,9 @@ empOne.getSchedule()
 */
 
 //CODE HERE
-const empTwo = {...empOne, name: `Nick`}
+const empTwo = {...empOne, name: 'Nick'}
+
+
 
 
 //////////////////PROBLEM 2////////////////////
@@ -93,17 +95,17 @@ const empTwo = {...empOne, name: `Nick`}
 */
 
 //CODE HERE
-class Manager extends Employee{
+class Manager extends Employee {
     constructor(name, shifts, employees){
         super(name, shifts)
         this.employees = employees
     }
 
     getEmployees(){
-        console.log(`${this.name} manages ${this.employees}.`)
+        console.log(`${this.name} manages ${this.employees.join(`,`)}.`)
     }
 
-    addEmployee(){
+    addEmployee(newEmployee){
         this.employees.push(newEmployee)
     }
 }
@@ -122,7 +124,7 @@ class Manager extends Employee{
 */
 
 //CODE HERE
-const manager = new Manager(`Winston`, `weekday mornings, weekday afternoons`, ['cece', 'schmidt'])
+const manager = new Manager('Winston', `weekday mornings, weekday afternoons`, ['Cece', 'Schmidt'])
 
 /*
     Call the `getEmployees` method on the
@@ -130,7 +132,7 @@ const manager = new Manager(`Winston`, `weekday mornings, weekday afternoons`, [
 */
 
 //CODE HERE
-
+manager.getEmployees()
 /*
     Call the `addEmployee` method on the 
     `manager` object passing in the string 
@@ -138,7 +140,7 @@ const manager = new Manager(`Winston`, `weekday mornings, weekday afternoons`, [
 */
 
 //CODE HERE 
-
+manager.addEmployee('Coach')
 /*
     Call the `getEmployees` method on the
     `manager` object again to confirm 
@@ -146,3 +148,4 @@ const manager = new Manager(`Winston`, `weekday mornings, weekday afternoons`, [
 */
 
 //CODE HERE
+manager.getEmployees()
