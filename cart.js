@@ -34,7 +34,11 @@ const cart = [
 ]
 
 //CODE HERE
-const summedPrice = cart.reduce((acc, el)=>{}, 0)
+
+const summedPrice = cart.reduce((acc, el)=> {
+    //console.log(acc, el)
+    return acc + el.price
+}, 0)
 
 console.log(summedPrice)
 
@@ -55,7 +59,7 @@ console.log(summedPrice)
 */
 
 //CODE HERE
-const calcFinalPrice = (cartTotal, coupon, tax) => {
+const calcFinalPrice = (total, coupon, tax ) => {
     let finalTotal = (total * (1 + tax)) - coupon
     return finalTotal
 }
@@ -95,3 +99,9 @@ console.log(calcFinalPrice(10, 2, .06))
 */
 
 //CODE HERE
+const customer = {
+    firstName: 'Brandon',
+    lastName: 'Hunsaker',
+    phone: '801-789-0345',
+    creditCardNo: '000000000000'
+}
