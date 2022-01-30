@@ -53,15 +53,14 @@ console.log(greetUser('Andrew'))
 const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
 
 //CODE HERE
-const canWeDeliverTwo = zipCode => {
-    let message = `Sorry we can't deliver to that adress`
-    deliveryAreaZipCodes.forEach(zip => {
-        if(zipCode === zip){
-            message = `Youre in our deliverz zone`
-        }
-    })
-    return message
-}
+const canWeDeliver = (zipCode) => {
+    if(deliveryAreaZipCodes.includes(zipCode)){
+        return "You're in our delivery zone"
+    }
+    else {
+        return "Sorry, we can't deliver to that address"
+    }
+} 
 
 
 /* 
@@ -82,15 +81,18 @@ const canWeDeliverTwo = zipCode => {
 */
 
 // CODE HERE
-const canWeDeliver = zipCode => {
-    if(deliveryAreaZipCodes.includes(zipCode)){
-        return `Youre in our delivery area`
-    }
-    else{
-        return `Sorry we can't deliver there`
-    }
+const canWeDeliverTwo = (zipCode) => {
+    let message = `Sorry we can't deliver to that address`
+    deliveryAreaZipCodes.forEach(zip => {
+        if(zipCode === zip){
+            message = `You're in our delivery zone`
+        }
+    
+    })
+    return message
 }
 
+console.log(canWeDeliverTwo(85205))
 //////////////////PROBLEM 3////////////////////
 /* 
     Below is an array of objects that have some
@@ -142,6 +144,6 @@ console.log(deals)
 */
 
 //CODE HERE
-deals[1].desc = deals[1].desc.replace("March", "April").trim()
+deals[1].desc = deals[1].desc.replace('March', 'April').trim()
 
 console.log(deals)
